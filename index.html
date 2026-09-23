@@ -7,7 +7,6 @@
     <meta name="description" content="Personal portfolio of SHEWRIAR NAFIJ SIMANTO - Diploma Engineering Student and Web Developer.">
     <meta name="author" content="SHEWRIAR NAFIJ SIMANTO">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Threads icon relies on newer FontAwesome, using a solid icon as fallback or custom brand if available -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     
     <style>
@@ -60,7 +59,7 @@
         .btn-outline { border-color: var(--border); background: rgba(255,255,255,0.03); }
         .btn-outline:hover { border-color: var(--secondary); color: var(--secondary); transform: translateY(-4px); }
 
-        /* HERO CARD (Profile Image fallback) */
+        /* HERO CARD */
         .hero-card { position: relative; width: 320px; height: 320px; margin: auto; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--primary), var(--secondary)); box-shadow: 0 0 80px rgba(0,212,255,0.2); }
         .hero-card::before { content: ""; position: absolute; width: 285px; height: 285px; border-radius: 50%; background: var(--bg2); }
         .hero-card-content { position: relative; text-align: center; }
@@ -166,7 +165,7 @@
         </div>
     </section>
 
-    <!-- ABOUT (আপনার ছবি এখানে বসানো হয়েছে) -->
+    <!-- ABOUT -->
     <section id="about" class="section">
         <div class="container">
             <div class="section-title">
@@ -177,7 +176,6 @@
 
             <div class="about-grid">
                 <div class="about-image">
-                     <!-- এখানে আপনার গিটহাবে আপলোড করা 11308.jpg ছবিটি লোড হবে -->
                      <img src="11308.jpg" alt="SHEWRIAR NAFIJ SIMANTO">
                 </div>
                 <div class="about-box">
@@ -262,18 +260,19 @@
 
                 <div class="contact-form">
                     <h3>Send a Message</h3>
-                    <form onsubmit="event.preventDefault(); alert('Message feature will be connected soon!');">
+                    <!-- Formspree লিংক এখানে বসানো হয়েছে -->
+                    <form action="https://formspree.io/f/mljdnwly" method="POST">
                         <div class="form-group">
                             <label>Your Name</label>
-                            <input type="text" placeholder="Enter your name">
+                            <input type="text" name="name" placeholder="Enter your name" required>
                         </div>
                         <div class="form-group">
                             <label>Your Email</label>
-                            <input type="email" placeholder="Enter your email">
+                            <input type="email" name="email" placeholder="Enter your email" required>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
-                            <textarea placeholder="Write your message here..."></textarea>
+                            <textarea name="message" placeholder="Write your message here..." required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
